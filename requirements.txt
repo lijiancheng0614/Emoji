@@ -1,0 +1,13 @@
+Django==1.8
+django-taggit
+django-images
+django-braces
+django-compressor
+django-tastypie==0.12.2
+Pillow
+requests
+mock
+factory-boy
+gunicorn
+psycopg2
+funcsigs

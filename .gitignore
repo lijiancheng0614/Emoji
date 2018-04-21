@@ -1,0 +1,35 @@
+# Virtualenv/Common
+/bin/
+/build/
+/dist/
+/include/
+/lib/
+/local/
+/media/
+/src/
+/static/
+/*.egg-info/
+/pip-log.txt
+/venv/
+/.venv/
+
+# Buildout
+/eggs/
+/develop-eggs/
+/.installed.cfg
+/*.egg
+
+# Bower
+/pinry/static/vendor/
+
+# sphinx
+/docs/_build/
+
+# Project
+/*.db
+/*.sqlite3
+
+# Misc
+/.idea/
+*.pyc
+*.swp
