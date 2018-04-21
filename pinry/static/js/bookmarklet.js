@@ -64,7 +64,7 @@
             textAlign: 'center',
             fontSize: '22px'
         });
-        pinryBar.textContent = 'Pinry Bookmarklet';
+        pinryBar.textContent = 'My Emoji';
         pinryBar.onclick = closePinry;
         pinryImages.appendChild(pinryBar);
         document.body.appendChild(pinryImages);

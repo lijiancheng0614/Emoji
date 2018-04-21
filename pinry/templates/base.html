@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-        <title>{% block title %}Pinry{% endblock %}</title>
+        <title>{% block title %}Doudou{% endblock %}</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"/>
@@ -53,7 +53,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="{% url 'core:recent-pins' %}" class="navbar-brand">
-                        <img src="{% static "img/logo-dark.png" %}" alt="Pinry"/>
+                        <img src="{% static "img/logo.png" %}" alt="Doudou"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
@@ -61,7 +61,7 @@
                         {% if user.is_authenticated %}
                             <li><a onclick="pinForm()">New Pin</a></li>
                             <li><a href="{% url 'users:logout' %}">Logout</a></li>
-                            <li>{% include "includes/bookmarklet_link.html" %}</li>
+                            <li><a id="bookmarklet" href="/pins/user/{{ user.username }}/" class="btn btn-default navbar-btn">My Emoji</a></li>
                         {% else %}
                             <li><a href="{% url 'users:login' %}">Login</a></li>
                             <li><a href="{% url 'users:register' %}">Register</a></li>
