@@ -44,8 +44,16 @@ a {
     border-radius: 0;
 }
 
+.navbar-brand {
+    padding: 0;
+}
+
 .navbar-brand img {
     font-family: 'Monoton', sans-serif;
+    height: 70px;
+}
+
+.navbar-nav>li>a>img {
     height: 30px;
 }
 

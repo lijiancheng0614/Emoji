@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-        <title>{% block title %}Doudou{% endblock %}</title>
+        <title>{% block title %}Emoji{% endblock %}</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"/>
@@ -53,18 +53,23 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="{% url 'core:recent-pins' %}" class="navbar-brand">
-                        <img src="{% static "img/logo.png" %}" alt="Doudou"/>
+                        <img src="{% static "img/logo.png" %}" alt="Emoji"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
-                            <li><a onclick="pinForm()">New Emoji</a></li>
-                            <li><a href="{% url 'users:logout' %}">Logout</a></li>
-                            <li><a id="bookmarklet" href="/pins/user/{{ user.username }}/" class="btn btn-default navbar-btn">My Emoji</a></li>
+                            <li><a onclick="pinForm()">
+                                <img src="{% static "img/new.png" %}" alt="Emoji"/>
+                            </a></li>
+                            <li><a href="/pins/user/{{ user.username }}/">
+                                <img src="{% static "img/collection.png" %}" alt="Emoji"/>
+                            </a></li>
+                            <li><a href="{% url 'users:logout' %}">
+                                <img src="{% static "img/login.png" %}" alt="Emoji"/>
+                            </a></li>
                         {% else %}
-                            <li><a href="{% url 'users:login' %}">Login</a></li>
-                            <li><a href="{% url 'users:register' %}">Register</a></li>
+                            <li><a href="{% url 'users:login' %}"><img src="{% static "img/login.png" %}"></a></li>
                         {% endif %}
                     </ul>
                 </div>
